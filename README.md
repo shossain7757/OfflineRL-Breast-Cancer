@@ -28,7 +28,7 @@ Create two separate virtual environment and install the packages.
 
 ## Running Experiments
 
-To reproduce the experiments outlined in the paper, ensure that you activate the appropriate Conda environment before executing the scripts. Training agent and generating data from the agent has been coded using Ray while Offline RL learning and policy evaluation has been done using Coach. Training Agent, Creating Agent generated data, Offline Learning and Evaluation all have separate command lines. 
+To reproduce the experiments outlined in the paper, ensure that you activate the appropriate Conda environment before executing the scripts. Training agent and generating data from the agent requires Ray while Offline RL learning and policy evaluation requires Coach. Training Agent, Creating Agent generated data, Offline Learning and Evaluation all have separate command lines. 
 
 ### Train Agent
 		python train_agent.py -t
