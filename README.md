@@ -1,6 +1,6 @@
 # Overview
 
-This repository contains the implementation of experiments conducted in the research paper titled *Clinical Pathway Recommendations for Cancer Care with Offline Reinforcement Learning: A Breast Cancer Application Context* The study focuses on generating clinical pathway data for breast cancer patients using Ray to simulate patient trajectories and using Coach learns to recommend optimal clinical pathways in an offline fashion.
+This repository contains the implementation of experiments conducted in the research paper titled *Generating Clinical Pathway Recommendations for Cancer Care with Offline Reinforcement Learning: A Breast Cancer Application Context* The study focuses on generating clinical pathway data for breast cancer patients using Ray to simulate patient trajectories and using Coach learns to recommend optimal clinical pathways in an offline fashion.
 
 # Dependencies
 
@@ -30,15 +30,19 @@ Create two separate virtual environment and install the packages.
 
 To reproduce the experiments outlined in the paper, ensure that you activate the appropriate Conda environment before executing the scripts. Training agent and generating data from the agent requires Ray while Offline RL learning and policy evaluation requires Coach. Training Agent, Creating Agent generated data, Offline Learning and Evaluation all have separate command lines. 
 
-### Train Agent
+### Experiment 1
+		
 		python train_agent.py -t
-
-### Generate Offline Data
-		python create_augmented_data.py -t
-
-### Offline RL
 		python offline_learning.py -q -t -e
+		python evaluate.py -q -t -e
 
-### Policy Evaluation
+
+### Experiment 2
+		python create_augmented_data.py -t
+		python offline_learning.py -q -t -e
+		python evaluate.py -q -t -e
+
+### Experiment 3
+		python offline_learning.py -q -t -e
 		python evaluate.py -q -t -e
 
